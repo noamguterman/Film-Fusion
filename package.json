@@ -1,0 +1,15 @@
+{
+  "name": "Scrim-s0rfv3mion",
+  "description": "https://scrimba.com/s0rfv3mion/head",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "openai": "4.20.0",
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}
