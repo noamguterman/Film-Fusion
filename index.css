@@ -5,21 +5,22 @@
 body {
   font-family: 'Roboto', sans-serif;
   background: #343D3F; 
-  padding-bottom: 20px;
+  padding-bottom: 1.25em;
   color: #222;
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.9); /* Slight white tint */
-  backdrop-filter: blur(10px); /* Blur effect for background */
-  padding: 20px;
+  background: #ffffffe6;
+  backdrop-filter: blur(10px);
+  padding: 1.25em;
   border-radius: 8px;
   width: 100%;
-  max-width: 650px;
+  max-width: 1000px;
   text-align: center;
-  margin: 40px auto 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3); /* White border */
+  margin: 0 auto;
+  margin-top: 1.5em;
+  box-shadow: 0 4px 6px #0000001a;
+  border: 1px solid #ffffff4d;
 }
 
 h1 {
@@ -31,16 +32,16 @@ h1 {
 
 .subtitle {
   color: #264653;
-  font-size: 20px;
-  margin: 0 0 32px;
+  font-size: 1.25rem;
+  margin: 0 0 2em;
 }
 
 .poster-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: .625em;
+  margin-bottom: 1.25em;
 }
 
 button,
@@ -52,7 +53,7 @@ input[type="text"],
 select {
   flex: 1;
   min-width: 140px;
-  padding: 10px;
+  padding: .625em;
   border: 2px solid #443C76;
   background: #f0f0f0;
   border-radius: 4px;
@@ -63,7 +64,7 @@ button {
   border: none;
   background: #443C76;
   color: white;
-  padding: 10px 20px;
+  padding: .625em 1.25em;
   cursor: pointer;
   border-radius: 4px;
   transition: background 0.3s ease;
@@ -75,12 +76,12 @@ button:hover {
 
 .poster-output {
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 1.25em;
   min-height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.1); /* Transparent black background */
+  background: #0000001a;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -102,7 +103,10 @@ img {
     white-space: nowrap;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+  input, select, button {
+    display: block;
+  }
   .poster-form {
       flex-direction: column;
   }

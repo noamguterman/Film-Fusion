@@ -1,7 +1,7 @@
 import OpenAI from 'openai';
 
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*', // Or specify your domain if you want to restrict it
+  'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'GET, HEAD, POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type',
   'Access-Control-Max-Age': '86400',
