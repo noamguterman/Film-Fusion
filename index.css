@@ -103,6 +103,19 @@ img {
     white-space: nowrap;
 }
 
+.loading {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #4b9fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
 @media (max-width: 800px) {
   input, select, button {
     display: block;
@@ -114,4 +127,9 @@ img {
   input[type="text"], button {
       width: 100%;
   }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

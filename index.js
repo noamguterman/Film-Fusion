@@ -2,6 +2,7 @@ const form = document.querySelector("#posterForm")
 const movieTitle = document.querySelector("#movie-title")
 const artStyles = document.querySelector("#art-styles")
 const posterOutput = document.querySelector("#poster-output")
+const generatePosterBtn = document.getElementById("generatePosterBtn")
 
 form.addEventListener("submit", function (event) {
   event.preventDefault()
@@ -16,6 +17,7 @@ async function generatePoster(title, style) {
   const imageEl = document.createElement('img')
   
   try {
+    generatePosterBtn.innerHTML = '<div class="loading"></div>'
     statusEl.textContent = `Generating a poster for a movie called ${title} in ${style} style...`
     posterOutput.appendChild(statusEl)
     
@@ -48,5 +50,7 @@ async function generatePoster(title, style) {
   } catch(err) {
     statusEl.textContent = err.message || 'Error generating image. Please try again.'
     posterOutput.appendChild(statusEl)
+  } finally {
+    generatePosterBtn.innerHTML = 'Generate Poster'
   }
 }
